@@ -99,3 +99,8 @@ if (command === "do-what-it-says"){
     spot(data[1]);
 });
 }
+
+fs.appendFile('log.txt', command, function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+});
